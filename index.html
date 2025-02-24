@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>星潜力</title>
+	<link rel="icon" href="./img/logo.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            background-image: url(./img/bg_页面_1.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            box-sizing: border-box;
+        }
+
+        /* 新增整体容器 */
+        .main-container {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            padding: 40px 60px;
+            margin-top: 30px;
+            max-width: 1200px;
+            width: 90%;
+        }
+
+        .logo {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        .logo img {
+            width: 280px;
+            height: auto;
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.1));
+        }
+
+        /* 修改后的按钮区域 */
+        .button-group {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* 修改此处，让按钮一行显示 */
+            gap: 40px;
+            padding: 30px;
+            background: linear-gradient(145deg, #f8fcff, #e6f7ff);
+            border-radius: 20px;
+            margin: 20px 0;
+        }
+
+        .button-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .button-wrapper:hover {
+            transform: translateY(-3px);
+        }
+
+        .button {
+            width: 100%;
+            aspect-ratio: 1/1;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.95);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+            background: linear-gradient(135deg, #ffffff, #f5feff);
+        }
+
+        .button img {
+            width: 60%;
+            height: 60%;
+            object-fit: contain;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+        }
+
+        .button-text {
+            font-size: 26px;
+            color: #2a5f7c;
+            font-weight: bold;
+            font-family: 楷体, cursive;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            white-space: nowrap;
+        }
+
+        /* 响应式设计 */
+        @media (min-width: 768px) and (max-width: 1024px) {
+            .main-container {
+                padding: 30px 40px;
+                border-radius: 25px;
+            }
+            .button-group {
+                grid-template-columns: repeat(7, 1fr); /* 修改此处，让按钮一行显示 */
+                gap: 30px;
+                padding: 20px;
+            }
+            .button {
+                border-radius: 15px;
+            }
+            .button-text {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .main-container {
+                padding: 20px;
+                border-radius: 20px;
+                width: 95%;
+            }
+            .button-group {
+                grid-template-columns: repeat(7, 1fr); /* 修改此处，让按钮一行显示 */
+                gap: 25px;
+                padding: 15px;
+                border-radius: 15px;
+            }
+            .button-text {
+                font-size: 22px;
+            }
+            .logo img {
+                width: 220px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .button-group {
+                grid-template-columns: repeat(7, 1fr); /* 修改此处，让按钮一行显示 */
+                gap: 20px;
+            }
+            .button {
+                border-radius: 12px;
+            }
+            .button-text {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="./img/logo.png" alt="机构logo">
+    </div>
+    
+    <div class="main-container">
+        <div class="button-group">
+            <!-- 语文 -->
+            <div class="button-wrapper">
+                <a href="./语文.html" class="button">
+                    <img src="img/语文.png" alt="语文图标">
+                </a>
+                <div class="button-text">语文</div>
+            </div>
+
+            <!-- 数学 -->
+            <div class="button-wrapper">
+                <a href="./数学.html" class="button">
+                    <img src="img/数学.png" alt="数学图标">
+                </a>
+                <div class="button-text">数学</div>
+            </div>
+
+            <!-- 英语 -->
+            <div class="button-wrapper">
+                <a href="./英语.html" class="button">
+                    <img src="img/英语 (2).png" alt="英语图标">
+                </a>
+                <div class="button-text">英语</div>
+            </div>
+
+            <!-- 书法 -->
+            <div class="button-wrapper">
+                <a href="./书法.html" class="button">
+                    <img src="img/毛笔 (1).png" alt="书法图标">
+                </a>
+                <div class="button-text">书法</div>
+            </div>
+
+            <!-- 美术 -->
+            <div class="button-wrapper">
+                <a href="./美术.html" class="button">
+                    <img src="img/美术.png" alt="美术图标">
+                </a>
+                <div class="button-text">美术</div>
+            </div>
+
+            <!-- 体适能 -->
+            <div class="button-wrapper">
+                <a href="./体适能.html" class="button">
+                    <img src="img/健身房.png" alt="体适能图标">
+                </a>
+                <div class="button-text">体适能</div>
+            </div>
+
+            <!-- 托管 -->
+            <div class="button-wrapper">
+                <a href="./托管.html" class="button">
+                    <img src="img/托管.png" alt="托管图标">
+                </a>
+                <div class="button-text">托管</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
